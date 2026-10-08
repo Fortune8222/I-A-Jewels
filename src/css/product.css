@@ -1,0 +1,18 @@
+.pd{max-width:960px;margin:0 auto;padding:0 16px 48px;display:grid;gap:18px}
+.pd .hero{border-radius:var(--r);overflow:hidden;background:var(--blush)}
+.pd .hero img{width:100%;max-height:78svh;object-fit:contain;margin:0 auto}
+.pd h1{margin:0;font:700 1.7rem/1.15 var(--serif)}
+.pd .price{margin:0;font-size:1.35rem;font-weight:700;color:var(--bronze)}
+.pd .price small{font-size:.9rem;font-weight:500;color:var(--muted)}
+.pd .desc{margin:0;color:var(--muted);max-width:60ch}
+.enq{display:grid;gap:10px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r)}
+.enq label,.enq legend{font-weight:600}
+.enq textarea{width:100%;min-height:92px;padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;color:var(--ink)}
+.enq fieldset{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.enq fieldset label{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:999px}
+.more{display:grid;gap:12px}
+.more h2{margin:8px 0 0;font:700 1.25rem var(--serif)}
+.rel{column-count:2;column-gap:12px}
+@media(min-width:700px){.rel{column-count:3}}
+.back{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-weight:600;color:var(--bronze)}
+@media(min-width:800px){.pd.has-hero{grid-template-columns:1fr 1fr;align-items:start}.pd .hero{grid-row:span 5}.more{grid-column:1/-1}}
