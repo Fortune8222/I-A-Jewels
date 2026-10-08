@@ -1,0 +1,1 @@
+{ "name": "ia-jewels", "version": "1.0.0", "private": true, "type": "module", "scripts": { "build": "node scripts/build-products.js" }, "engines": { "node": ">=18" } }
