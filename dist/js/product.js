@@ -1,1 +1,12 @@
-
+import { buildMessage, waLink } from "./whatsapp.js";
+import { getCat } from "./navigation.js";
+const el = document.getElementById("enquire"), box = document.getElementById("msg"), wa = document.getElementById("wa");
+const d = el.dataset, vs = [...document.querySelectorAll("input[name=variant]")];
+let edited = false;
+const sync = () => { if (!edited) { const v = vs.find((x) => x.checked); box.value = buildMessage({ name: d.name, variant: v?.value, price: v?.dataset.price }); } wa.href = waLink(box.value); };
+box.addEventListener("input", () => { edited = true; sync(); });
+vs.forEach((v) => v.addEventListener("change", () => { edited = false; sync(); }));
+sync();
+const back = document.getElementById("back");
+back.addEventListener("click", (e) => { if (history.length > 1 && document.referrer.startsWith(location.origin)) { e.preventDefault(); history.back(); } });
+const c = getCat(); if (c !== "all") back.href = `/catalogue/?c=${c}`;
