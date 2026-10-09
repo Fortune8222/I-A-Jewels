@@ -11,3 +11,4 @@ a{color:inherit}
 .brand img{width:36px;height:36px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.btn.wa{background:#0b6b3a}.btn.wa:hover{background:#08522c}
