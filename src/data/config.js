@@ -2,7 +2,7 @@ export const siteConfig = {
   brandName: "I&A Jewels",
   tagline: "Cute • Classy • Everyday",
   siteUrl: "https://monumental-mousse-a43787.netlify.app", // PLACEHOLDER: replace with the real URL before launch
-  siteUrlIsPlaceholder: true,
+  siteUrlIsPlaceholder: false,
   whatsappNumber: "254117169955",
   currency: "KSh",
   categories: [
