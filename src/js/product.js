@@ -3,7 +3,7 @@ import { getCat } from "./navigation.js";
 const el = document.getElementById("enquire"), box = document.getElementById("msg"), wa = document.getElementById("wa");
 const d = el.dataset, vs = [...document.querySelectorAll("input[name=variant]")];
 let edited = false;
-const sync = () => { if (!edited) { const v = vs.find((x) => x.checked); box.value = buildMessage({ name: d.name, variant: v?.value, price: v?.dataset.price }); } wa.href = waLink(box.value); };
+const sync = () => { if (!edited) { const v = vs.find((x) => x.checked); box.value = buildMessage({ name: d.name, variant: v?.value, price: v?.dataset.price, url: location.origin + location.pathname }); } wa.href = waLink(box.value); };
 box.addEventListener("input", () => { edited = true; sync(); });
 vs.forEach((v) => v.addEventListener("change", () => { edited = false; sync(); }));
 sync();
