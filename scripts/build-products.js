@@ -39,7 +39,7 @@ for (const d of ["css", "js", "data", "assets"]) cpSync(join(S, d), join(D, d), 
 const w = (p, s) => { mkdirSync(dirname(join(D, p)), { recursive: true }); writeFileSync(join(D, p), s); };
 const rd = (f) => readFileSync(join(S, f), "utf8");
 const org = ld({ "@context": "https://schema.org", "@type": "Organization", name: C.brandName, url: url("/"), logo: url("/assets/brand/logo.png") });
-w("index.html", fill(rd("index.html"), { HEAD: head({ title: `${C.brandName} — ${C.tagline}`, desc: "Cute, classy everyday jewellery and accessories. Browse the catalogue and enquire on WhatsApp.", path: "/", image: "/assets/brand/og.jpg", extra: org }), TAGLINE: esc(C.tagline) }));
+w("index.html", fill(rd("index.html"), { HEAD: head({ title: `${C.brandName} — ${C.tagline}`, desc: "Cute, classy everyday jewellery and accessories. Browse the catalogue and enquire on WhatsApp.", path: "/", image: "/assets/brand/og.jpg", extra: org }), TAGLINE: esc(C.tagline), WA: WAG }));
 const used = C.categories.filter((c) => products.some((p) => p.category === c.id));
 const tabs = [{ id: "all", name: "All" }, ...used].map((c) => `<li><a href="/catalogue/${c.id === "all" ? "" : "?c=" + c.id}" data-cat="${c.id}"${c.id === "all" ? ' aria-current="true"' : ""}>${esc(c.name)}</a></li>`).join("");
 w("catalogue/index.html", fill(rd("catalogue/index.html"), { HEAD: head({ title: `Catalogue | ${C.brandName}`, desc: "Browse I&A Jewels necklaces, rings, hair accessories and waist chains. Prices in KSh; enquire on WhatsApp.", path: "/catalogue/", image: "/assets/brand/og.jpg" }), TABS: tabs, COUNT: String(products.length), CARDS: products.map(card).join("") }));
