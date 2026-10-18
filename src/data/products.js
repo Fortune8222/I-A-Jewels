@@ -1,6 +1,6 @@
 const nk = (id, name, alt, description) => ({ id: "ia-" + id, name, category: "necklaces", price: 200, images: [id + "/01.jpg"], alt, description, focus: 70 });
 export const products = [
-  nk("nk-cross", "Crystal Cross Necklace", "Gold-tone chain necklace with a crystal-set cross pendant on a red display bust", "Gold-tone chain with a crystal-set cross pendant."),
+  
   { id: "ia-moana", name: "Moana Flower Clip Sets", category: "hair", price: 200, priceNote: "per set", images: ["moana/01.jpg"], alt: "Six cards of flower-shaped claw clips, each with one large and two small clips, in teal, magenta, peach, cream, amber and purple", description: "Flower-shaped claw clip sets in six colourways. Each set has one large and two small clips. Message us on WhatsApp for available colours." },
   nk("nk-disc", "Round Crystal Disc Necklace", "Gold-tone chain necklace with a round crystal-covered disc pendant on a red display bust", "Gold-tone chain with a round crystal-covered disc pendant."),
   { id: "ia-claw", name: "Claw Clips", category: "hair", price: 130, images: ["claw/01.jpg"], alt: "Ten claw clips in bow, butterfly and wave shapes in pastel, green, purple and brown colours", description: "Claw clips in bow, butterfly and wave shapes. Message us on WhatsApp for available styles and colours." },
