@@ -9,6 +9,5 @@ export const siteConfig = {
     { id: "necklaces", name: "Necklaces" },
     { id: "rings", name: "Rings" },
     { id: "hair", name: "Hair" },
-    { id: "waist-chains", name: "Waist Chains" }
   ]
 };
